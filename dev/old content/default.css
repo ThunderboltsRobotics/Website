@@ -1,0 +1,47 @@
+/* Tags */
+aside{
+    flex:5;
+}
+body{
+    padding:2em 0;
+}
+header{
+    font-family:Roboto, sans-serif;
+    font-size:1.5em;
+    font-weight:bold;
+}
+html{
+    height:100%;
+}
+li,p,td{
+    font-family:'Noto Sans', sans-serif;
+}
+section{
+    background-color:#BFBFBF;
+    border:0.5em ridge #7F7F7F;
+    padding:0 0.5em;
+}
+
+/* Classes */
+.aside_wrapper{
+    display:flex;
+}
+.beside_wrapper{
+    flex:8;
+}
+.sitew{
+    margin:0 auto;
+    width:80%;
+}
+header.sitew{
+    background:linear-gradient(to bottom right, rgba(255, 0, 0, 0.9), rgba(63, 0, 0, 0.9));
+    font-size:2em;
+    font-style:oblique;
+    padding:0.5em 0.5em;
+}
+
+/* Don't ask */
+@viewport{
+    width: extend-to-zoom;
+    zoom: 1.0;
+}

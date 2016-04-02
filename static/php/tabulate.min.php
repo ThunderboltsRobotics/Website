@@ -1,0 +1,1 @@
+<?php function tabulate($a){echo "<table border='1'>";foreach($a as $k => $v){echo "<tr><td>".htmlentities($k)."</td><td>";if(is_array($v)){tabulate($v);}else{echo htmlentities($v);}echo "</td></tr>";}echo "</table>";}//v2016-04-01/00?>
