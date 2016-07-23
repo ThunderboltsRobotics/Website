@@ -7,6 +7,9 @@ body {
 a {
 	text-decoration: inherit;
 }
+<?php if (stripos($_SERVER["HTTP_USER_AGENT"], "mobile")) { ?>
+/* TODO */
+<?php } else { ?>
 main {
 	display: flex;
 	flex-flow: row nowrap;
@@ -24,3 +27,4 @@ main {
 	font-size: 3em;
 	font-style: italic;
 }
+<?php } ?>
