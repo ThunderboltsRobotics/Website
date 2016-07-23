@@ -1,6 +1,13 @@
 <svg width="256" height="384">
-	<path d="M92,16 l60,0 l-84,64 Z" fill="#FF5722" transform="translate(-80,0) scale(2)" /><!-- Deep Orange 500 -->
-	<path d="M152,16 l-36,64 l-60,32 l12,-32 Z" fill="#DD2C00" transform="translate(-80,0) scale(2)" /><!-- Deep Orange A700 -->
-	<path d="M116,80 l36,0 l-60,32 l-36,0 Z" fill="#9E9E9E" transform="translate(-80,0) scale(2)" /><!-- Gray 500 -->
-	<path d="M152,80 l-84,96 l24,-64 Z" fill="#616161" transform="translate(-80,0) scale(2)" /><!-- Gray 700 -->
+	<!-- Black outline -->
+	<path d="M92,16 l60,0 l-84,64 Z M152,16 l-36,64 l-60,32 l12,-32 Z M116,80 l36,0 l-60,32 l-36,0 Z M152,80 l-84,96 l24,-64 Z" fill="#000000" stroke="#000000" transform="translate(-80,0) scale(2)" />
+
+	<!-- Deep Orange 500 -->
+	<path d="M92,16 l60,0 l-84,64 Z" fill="#FF5722" transform="translate(-80,0) scale(2)" />
+	<!-- Deep Orange A700 -->
+	<path d="M152,16 l-36,64 l-60,32 l12,-32 Z" fill="#DD2C00" transform="translate(-80,0) scale(2)" />
+	<!-- Gray 500 -->
+	<path d="M116,80 l36,0 l-60,32 l-36,0 Z" fill="#9E9E9E" transform="translate(-80,0) scale(2)" />
+	<!-- Gray 700 -->
+	<path d="M152,80 l-84,96 l24,-64 Z" fill="#616161" transform="translate(-80,0) scale(2)" />
 </svg>
