@@ -1,1 +1,0 @@
-<header class="sitew" style="font-family:Lora, serif;font-size:2em;padding:0.5em 0.5em;">Thunderbolts Robotics</header><br>
