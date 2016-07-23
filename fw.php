@@ -17,7 +17,11 @@ require_once "php/framework_functions.php";
 		}
 		if (!file_exists("nostyles.txt")) {
 			echo "<link href='/static/css/default.css' rel='stylesheet' type='text/css'>\n";
+			echo "<link href='/static/css/site.css' rel='stylesheet' type='text/css'>\n";
 			echo "<link href='/static/favicon/16x16.png' rel='icon' type='image/png'>\n";
+		}
+		if (file_exists("styles.css")) {
+			echo "<link href='/styles.css' rel='stylesheet' type='text/css'>\n";
 		}
 		if (file_exists("styles.php")) {
 			echo "<style>\n";
