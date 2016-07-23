@@ -1,0 +1,18 @@
+@font-face {
+	font-family: 'Noto Sans';
+	font-style: normal;
+	src: local('Noto Sans'), local('NotoSans'), url('/static/fonts/Noto Sans.ttf');
+}
+@import 'https://fonts.googleapis.com/css?family=Noto+Sans';
+* {
+	font-family: 'Noto Sans';
+}
+code,output {
+	font-family: monospace;
+}
+table {
+	border-collapse: collapse;
+}
+td,th,tr {
+	padding: 0.25em;
+}
