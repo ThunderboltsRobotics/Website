@@ -4,6 +4,9 @@ html, body, main {
 body {
 	margin: 0;
 }
+a {
+	text-decoration: inherit;
+}
 main {
 	display: flex;
 	flex-flow: row nowrap;
