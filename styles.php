@@ -10,7 +10,7 @@ a {
 <?php if (stripos($_SERVER["HTTP_USER_AGENT"], "mobile")) { ?>
 /* TODO */
 <?php } else { ?>
-main {
+main, #social-icons {
 	display: flex;
 	flex-flow: row nowrap;
 }
@@ -26,5 +26,8 @@ main {
 	font-family: Audiowide;
 	font-size: 3em;
 	font-style: italic;
+}
+#social-icons > a {
+	margin: 0.25em;
 }
 <?php } ?>
