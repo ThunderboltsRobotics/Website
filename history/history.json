@@ -1,24 +1,10 @@
 {
 	"FRC": {
-		"2012": "Asia-Pacific Invitational:<ul>
-			<li></li>
-		</ul>",
-		"2013": "Asia-Pacific Invitational:<ul>
-			<li></li>
-		</ul>",
-		"2014": "Asia-Pacific Invitational:<ul>
-			<li></li>
-		</ul>",
-		"2015": "Australia Regionals:<ul>
-			<li></li>
-		</ul>",
-		"2016": "Australia Regionals:<ul>
-			<li>Qualification Rank: 18</li>
-			<li>Reached: Quarter-finals</li>
-		</ul>Duel Down Under:<ul>
-			<li>Qualification Rank: 23</li>
-			<li>Reached: Quarter-finals</li>
-		</ul>"
+		"2012": "Asia-Pacific Invitational:<ul>\n<li></li>\n</ul>",
+		"2013": "Asia-Pacific Invitational:<ul>\n<li></li>\n</ul>",
+		"2014": "Asia-Pacific Invitational:<ul>\n<li></li>\n</ul>",
+		"2015": "Australia Regionals:<ul>\n<li></li>\n</ul>",
+		"2016": "Australia Regionals:<ul>\n<li>Qualification Rank: 18</li>\n<li>Reached: Quarter-finals</li>\n</ul>Duel Down Under:<ul>\n<li>Qualification Rank: 23</li>\n<li>Reached: Quarter-finals</li>\n</ul>"
 	},
 	"FTC": {
 		"2014": "",
