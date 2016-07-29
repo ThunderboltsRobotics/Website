@@ -1,7 +1,7 @@
 <section>
 	<table border="1">
 		<tr>
-			<th colspan="3">Competition History</th>
+			<th colspan="4">Competition History</th>
 		</tr>
 		<tr>
 			<th>Season (FRC)</th>
