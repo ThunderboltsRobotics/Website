@@ -1,4 +1,4 @@
-<?php //v2016-07-23/00
+<?php //v2016-07-30/00
 ini_set("include_path",".:".$_SERVER["DOCUMENT_ROOT"]."/static");
 require_once "php/framework_arrays.php";
 require_once "php/framework_functions.php";
@@ -28,12 +28,34 @@ require_once "php/framework_functions.php";
 			require_once "styles.php";
 			echo "</style>\n";
 		}
-		if (file_exists("folderlabel.txt")) {
-			echo "<title>" . file_get_contents("folderlabel.txt") . "</title>";
-		}
+		echo "<title>" . fw_get_header_title(".") . "</title>\n";
 		?>
 	</head>
 	<body>
+		<header>
+			<section><?php
+				$temp = [];
+				if ($_SERVER["REQUEST_URI"] !== "/index.php") {
+					$temp1 = explode("/", $_SERVER["REQUEST_URI"]);
+					array_shift($temp1);
+					array_pop($temp1);
+					for ($i = 0; $i < count($temp1); $i++) {
+						$temp[$i] = $temp1[$i];
+						if ($i != count($temp1) - 1) {
+							for ($j = 1; $j < $i; $j++) {
+								$temp[$i] .= "/" . $temp[$i];
+							}
+						}
+						$temp[$i] = fw_get_header_title($temp[$i]);
+					}
+					echo implode(" &rang; ", $temp);
+				} else {
+					echo fw_get_header_title(".");
+				}
+			?></section>
+			<section>
+			</section>
+		</header>
 		<?php
 		foreach (["php", "md", "html", "htm"] as $e) {
 			if (file_exists("body.$e")) {
@@ -46,5 +68,6 @@ require_once "php/framework_functions.php";
 			}
 		}
 		?>
+		<script>(function(){setTimeout(function(){location.reload();}, 10000);})()</script>
 	</body>
 </html>
