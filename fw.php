@@ -34,7 +34,8 @@ require_once "php/framework_functions.php";
 	</head>
 	<body>
 		<header>
-			<section><?php
+			<div id="header-icon" style="flex: 0.05;"><?php require_once "images/header-icon.svg"; ?></div>
+			<div>&rang; <?php
 				if ($_SERVER["REQUEST_URI"] === "/" || $_SERVER["REQUEST_URI"] === "/index.php") {
 					echo $fw_pageTitle;
 				} else {
@@ -58,9 +59,8 @@ require_once "php/framework_functions.php";
 					}
 					echo implode(" &rang; ", $toReturn);
 				}
-			?></section>
-			<section>
-			</section>
+			?></div>
+			<div style="text-align: right;">Thunderbolts Robotics</div>
 		</header>
 		<?php
 		foreach (["php", "md", "html", "htm"] as $e) {

@@ -6,14 +6,17 @@
 @import 'https://fonts.googleapis.com/css?family=Noto+Sans';
 
 * {
-	font-family: 'Noto Sans';
+	font-family: inherit;
 }
-code,output {
+code, output {
 	font-family: monospace;
+}
+html {
+	font-family: 'Noto Sans';
 }
 table {
 	border-collapse: collapse;
 }
-td,th,tr {
+td, th, tr {
 	padding: 0.25em;
 }
