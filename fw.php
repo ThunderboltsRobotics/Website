@@ -72,7 +72,9 @@ require_once "php/framework_functions.php";
 				break;
 			}
 		}
+		if (isset($_GET["autorefresh"])) {
+			echo "<script>(function(){setTimeout(function(){location.reload();}, 10000);})()</script>";
+		}
 		?>
-		<script>(function(){setTimeout(function(){location.reload();}, 10000);})()</script>
 	</body>
 </html>
