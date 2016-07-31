@@ -34,7 +34,7 @@ require_once "php/framework_functions.php";
 	</head>
 	<body>
 		<header>
-			<div id="header-icon" style="flex: 0.05;"><?php require_once "images/header-icon.svg"; ?></div>
+			<div id="header-icon" style="flex: 0.05; position: relative; top: 0.25em;"><a href="/" target="_top"><?php require_once "images/header-icon.svg"; ?></a></div>
 			<div>&rang; <?php
 				if ($_SERVER["REQUEST_URI"] === "/" || $_SERVER["REQUEST_URI"] === "/index.php") {
 					echo $fw_pageTitle;
