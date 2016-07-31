@@ -1,7 +1,5 @@
-body > header > section {
-	margin: 0 0.5em;
-	position: relative;
-	top: 0.5em;
+body > header {
+	padding: 0 0.25em;
 }
 main, #social-icons {
 	display: flex;
@@ -16,7 +14,6 @@ main, #social-icons {
 	margin: 1em;
 }
 .nav-col > nav > a {
-	font-family: 'Audiowide';
 	font-size: 3em;
 	font-style: italic;
 }

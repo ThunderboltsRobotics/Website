@@ -5,6 +5,7 @@ body {
 	margin: 0;
 }
 main {
+	font-family: 'Audiowide';
 	height: 90%;
 }
 a {
