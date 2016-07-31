@@ -1,4 +1,11 @@
 <?php
+function fw_dir_to_name($dir) {
+	if (strlen($dir) < 1) {
+		$dir = explode("/", $_SERVER["REQUEST_URI"]);
+		$dir = $dir[count($dir) - 2];
+	}
+	return ucwords(implode(" ", explode("-", $dir)));
+}
 function fw_ganalytics($key) {
 	if (!is_string($key)) {
 		return false;
@@ -8,16 +15,6 @@ function fw_ganalytics($key) {
 	}
 	//TODO
 	// return "$key";
-}
-function fw_get_header_title($dir) {
-	if (file_exists($_SERVER["DOCUMENT_ROOT"] . "/$dir/page-name.txt")) {
-		return file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/$dir/page-name.txt");
-	} else if ($dir === ".") {
-		$temp = explode("/", $_SERVER["REQUEST_URI"]);
-		return ucwords(implode(" ", explode("-", $temp[count($temp) - 2])));
-	} else {
-		return ucwords(implode(" ", explode("-", $dir)));
-	}
 }
 function fw_js_prereqs($script, $recurse = []) {
 	if ($script === ".") { //If top-level

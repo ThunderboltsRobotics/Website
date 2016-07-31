@@ -28,29 +28,34 @@ require_once "php/framework_functions.php";
 			require_once "styles.php";
 			echo "</style>\n";
 		}
-		echo "<title>" . fw_get_header_title(".") . "</title>\n";
+		echo "<title>" . (file_exists("page-name.txt") ? file_get_contents("page-name.txt") : fw_dir_to_name()) . "</title>\n";
 		?>
 	</head>
 	<body>
 		<header>
 			<section><?php
-				$temp = [];
-				if ($_SERVER["REQUEST_URI"] !== "/index.php") {
-					$temp1 = explode("/", $_SERVER["REQUEST_URI"]);
-					array_shift($temp1);
-					array_pop($temp1);
-					for ($i = 0; $i < count($temp1); $i++) {
-						$temp[$i] = $temp1[$i];
-						if ($i != count($temp1) - 1) {
-							for ($j = 1; $j < $i; $j++) {
-								$temp[$i] .= "/" . $temp[$i];
-							}
-						}
-						$temp[$i] = fw_get_header_title($temp[$i]);
-					}
-					echo implode(" &rang; ", $temp);
+				if ($_SERVER["REQUEST_URI"] === "/index.php") {
+					echo fw_dir_to_name();
 				} else {
-					echo fw_get_header_title(".");
+					$toReturn = [];
+					$uriList = explode("/", $_SERVER["REQUEST_URI"]);
+					array_shift($uriList);
+					array_pop($uriList);
+					for ($i = 0; $i < count($uriList); $i++) {
+						if ($i == count($uriList) - 1) {
+							//Last segment should have no link
+							$nameFile = $_SERVER["DOCUMENT_ROOT"] . implode("", explode("/index.php", $_SERVER["REQUEST_URI"])) . "/page-name.txt";
+							$toReturn[$i] = file_exists($nameFile) ? file_get_contents($nameFile) : fw_dir_to_name($uriList[$i]);
+						} else {
+							$temp = "";
+							for ($j = 0; $j <= $i; $j++) {
+								$temp .= "/" . $uriList[$i];
+							}
+							$nameFile = $_SERVER["DOCUMENT_ROOT"] . $temp . "/page-name.txt";
+							$toReturn[$i] = "<a href='/" . $uriList[$i] . "' target='_top'>" . (file_exists($nameFile) ? file_get_contents($nameFile) : fw_dir_to_name($uriList[$i])) . "</a>";
+						}
+					}
+					echo implode(" &rang; ", $toReturn);
 				}
 			?></section>
 			<section>
