@@ -1,5 +1,6 @@
 {
 	"FRC": {
+		"rookie-year": 2012,
 		"2012": "Asia-Pacific Invitational:<ul>\n<li></li>\n</ul>",
 		"2013": "Asia-Pacific Invitational:<ul>\n<li></li>\n</ul>",
 		"2014": "Asia-Pacific Invitational:<ul>\n<li></li>\n</ul>",
@@ -7,8 +8,9 @@
 		"2016": "Australia Regionals:<ul>\n<li>Qualification Rank: 18</li>\n<li>Reached: Quarter-finals</li>\n</ul>Duel Down Under:<ul>\n<li>Qualification Rank: 23</li>\n<li>Reached: Quarter-finals</li>\n</ul>"
 	},
 	"FTC": {
-		"2014": "",
-		"2015": "",
-		"2016": "TBA"
+		"rookie-year": 2014,
+		"2014/15": "",
+		"2015/16": "",
+		"2016/17": "TBA"
 	}
 }
