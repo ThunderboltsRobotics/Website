@@ -1,5 +1,5 @@
-<?php //v2016-07-30/00
-ini_set("include_path",".:".$_SERVER["DOCUMENT_ROOT"]."/static");
+<?php //v2016-07-31/00
+ini_set("include_path", ".:" . $_SERVER["DOCUMENT_ROOT"] . "/static");
 require_once "php/framework_arrays.php";
 require_once "php/framework_functions.php";
 ?>
