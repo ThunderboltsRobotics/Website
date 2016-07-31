@@ -28,14 +28,15 @@ require_once "php/framework_functions.php";
 			require_once "styles.php";
 			echo "</style>\n";
 		}
-		echo "<title>" . (file_exists("page-name.txt") ? file_get_contents("page-name.txt") : fw_dir_to_name()) . "</title>\n";
+		$fw_pageTitle = (file_exists("page-name.txt") ? file_get_contents("page-name.txt") : fw_dir_to_name());
+		echo "<title>" . $fw_pageTitle . "</title>\n";
 		?>
 	</head>
 	<body>
 		<header>
 			<section><?php
-				if ($_SERVER["REQUEST_URI"] === "/index.php") {
-					echo fw_dir_to_name();
+				if ($_SERVER["REQUEST_URI"] === "/" || $_SERVER["REQUEST_URI"] === "/index.php") {
+					echo $fw_pageTitle;
 				} else {
 					$toReturn = [];
 					$uriList = explode("/", $_SERVER["REQUEST_URI"]);

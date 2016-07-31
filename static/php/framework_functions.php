@@ -1,6 +1,6 @@
 <?php
 function fw_dir_to_name($dir) {
-	if (strlen($dir) < 1) {
+	if (!isset($dir) || strlen($dir) < 1) {
 		$dir = explode("/", $_SERVER["REQUEST_URI"]);
 		$dir = $dir[count($dir) - 2];
 	}
