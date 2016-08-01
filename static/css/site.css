@@ -5,6 +5,7 @@ a {
 }
 body {
 	background-color: #9E9E9E;
+	height: 100%;
 	margin: 0 0.5em;
 }
 body > header {
