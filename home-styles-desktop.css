@@ -1,5 +1,12 @@
-body > header {
-	padding: 0 0.25em;
+body {
+	overflow-y: hidden;
+}
+main {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 main, #social-icons {
 	display: flex;
