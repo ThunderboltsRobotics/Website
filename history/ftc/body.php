@@ -2,7 +2,7 @@
 	<table border="1" style="margin: auto;">
 		<tr>
 			<th>Season</th>
-			<td></td>
+			<td>10349's Record</td>
 		</tr>
 		<?php
 		$data = json_decode(file_get_contents("../history.json"), true)["FTC"];
