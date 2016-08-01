@@ -1,12 +1,5 @@
-html, body {
-	height: 100%;
-}
-body {
-	margin: 0;
-}
 main {
 	font-family: 'Audiowide';
-	height: 90%;
 }
 a {
 	text-decoration: inherit;
