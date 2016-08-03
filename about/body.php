@@ -7,16 +7,17 @@
 <table style="margin: auto;">
 	<tr>
 		<th>About the team</th>
-		<th>About FIRST&reg;</th>
+		<th>About FIRST<sup>&reg;</sup></th>
 	</tr>
 	<tr>
 		<td>
 			<p>
+			Looks like that data can't be found! @DEV: check request location
 			</p>
 		</td>
 		<td>
 			<p>
-			Want to learn more about FIRST&reg;? You can read about their <a href="http://www.firstinspires.org/about/vision-and-mission">vision and mission</a> on their website, <a href="firstinspires.org">firstinspires.org</a>.
+			Want to learn more about FIRST<sup>&reg;</sup>? You can read about their <a href="http://www.firstinspires.org/about/vision-and-mission">vision and mission</a> on their website, <a href="//firstinspires.org">firstinspires.org</a>.
 			</p>
 		</td>
 	</tr>
