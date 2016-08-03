@@ -1,4 +1,4 @@
-<?php //v2016-07-31/00
+<?php //v2016-08-03/00
 ini_set("include_path", ".:" . $_SERVER["DOCUMENT_ROOT"] . "/static");
 require_once "php/framework_arrays.php";
 require_once "php/framework_functions.php";
@@ -21,7 +21,7 @@ require_once "php/framework_functions.php";
 			echo "<link href='/static/favicon/16x16.png' rel='icon' type='image/png'>\n";
 		}
 		if (file_exists("styles.css")) {
-			echo "<link href='/styles.css' rel='stylesheet' type='text/css'>\n";
+			echo "<link href='styles.css' rel='stylesheet' type='text/css'>\n";
 		}
 		if (file_exists("styles.php")) {
 			echo "<style>\n";
@@ -34,7 +34,7 @@ require_once "php/framework_functions.php";
 	</head>
 	<body>
 		<header>
-			<div id="header-icon" style="flex: 0.05; position: relative; top: 0.25em;"><a href="/" target="_top"><?php require_once "images/header-icon.svg"; ?></a></div>
+			<div id="header-icon" style="flex: 0.05; position: relative; top: 0.25em;"><a href="/" target="_top" title="Home"><?php require_once "images/header-icon.svg"; ?></a></div>
 			<div>&rang; <?php
 				if ($_SERVER["REQUEST_URI"] === "/" || $_SERVER["REQUEST_URI"] === "/index.php") {
 					echo $fw_pageTitle;
@@ -47,14 +47,16 @@ require_once "php/framework_functions.php";
 						if ($i == count($uriList) - 1) {
 							//Last segment should have no link
 							$nameFile = $_SERVER["DOCUMENT_ROOT"] . implode("", explode("/index.php", $_SERVER["REQUEST_URI"])) . "/page-name.txt";
-							$toReturn[$i] = file_exists($nameFile) ? file_get_contents($nameFile) : fw_dir_to_name($uriList[$i]);
+							$name = file_exists($nameFile) ? file_get_contents($nameFile) : fw_dir_to_name($uriList[$i]);
+							$toReturn[$i] = $name;
 						} else {
 							$temp = "";
 							for ($j = 0; $j <= $i; $j++) {
 								$temp .= "/" . $uriList[$i];
 							}
 							$nameFile = $_SERVER["DOCUMENT_ROOT"] . $temp . "/page-name.txt";
-							$toReturn[$i] = "<a href='/" . $uriList[$i] . "' target='_top'>" . (file_exists($nameFile) ? file_get_contents($nameFile) : fw_dir_to_name($uriList[$i])) . "</a>";
+							$name = file_exists($nameFile) ? file_get_contents($nameFile) : fw_dir_to_name($uriList[$i]);
+							$toReturn[$i] = "<a href='/" . $uriList[$i] . "' target='_top' title='$name'>$name</a>";
 						}
 					}
 					echo implode(" &rang; ", $toReturn);
