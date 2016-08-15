@@ -14,7 +14,7 @@
 		<nav id="social-icons">
 			<a href="https://www.facebook.com/Thunderbolts-Robotics-223624927777456" target="_top"><img height="64" src="/static/images/fb-icon.png" width="64"></a>
 			<a href="https://www.youtube.com/channel/UCNCmshpL19mBLa_LTZ8EzaA" target="_top"><img height="64" src="/static/images/yt-icon.png" width="64"></a>
-			<!-- <a href=""><img height="64" src="/static/images/gplus-icon.png" width="64"></a> -->
+			<a href="https://plus.google.com/115108223482081325665" target="_top"><img height="64" src="/static/images/gplus-icon.png" width="64"></a>
 		</nav>
 	</aside>
 </main>
