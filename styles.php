@@ -1,5 +1,5 @@
 main {
-	font-family: 'Audiowide';
+	font-family: 'Audiowide', sans;
 }
 a {
 	text-decoration: inherit;
